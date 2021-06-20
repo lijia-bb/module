@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let moduleA=(function (){
+				var count=10;//私有变量
+				function showA(){  //私有函数
+						count+=10;
+						console.log(count,'A')
+				}
+				function showB(){
+					count+=20;
+					console.log(count,'A')
+				}
+				return {
+					outA:showA,
+					outB:showB
+				}
+			})()
+			let moduleB=(function (){
+				var count=50;
+				function showA(){
+					count*=10;
+					console.log(count,'B')
+				}
+				function showB(){
+					count*=20;
+					console.log(count,'B')
+				}
+				return {
+					outA:showA,
+					outB:showB
+				}
+			})()
+			moduleA.outA()
+			moduleA.outB()
+			moduleB.outA()
+			moduleB.outB()
+		</script>
+	</body>
+</html>

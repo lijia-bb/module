@@ -1,0 +1,6 @@
+function moduleA(){
+	
+}
+function moduleB(){
+	
+}
