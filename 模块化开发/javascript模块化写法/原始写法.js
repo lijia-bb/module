@@ -1,6 +1,0 @@
-function moduleA(){
-	
-}
-function moduleB(){
-	
-}
